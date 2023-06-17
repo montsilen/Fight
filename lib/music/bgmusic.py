@@ -1,8 +1,9 @@
 import pygame.mixer
 
 class backgroundMusicMixer:
-    def __init__(self) -> None:
-        pygame.mixer.music.load("D:/zzy/附中/项目/fight/assets/music/BackgroundMusic.mp3")
+    def __init__(self, dir) -> None:
+        pygame.mixer.music.load(dir + "/assets/music/BackgroundMusic.mp3")
+        self.basedir = dir
         self.backgroundMusicOn = True
         self.backgroundMusicVolume = 80
         pygame.mixer.music.set_volume(self.backgroundMusicVolume / 100)
