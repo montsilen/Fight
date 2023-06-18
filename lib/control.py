@@ -1,6 +1,6 @@
 import pygame, sys
 
-import lib.music.bgmusic
+from .music import bgmusic
 
 class control:
     def __init__(self, dir) -> None:
@@ -8,7 +8,7 @@ class control:
         self.basedir = dir
         self.screen = pygame.display.set_mode((1280, 720))
         self.tickClock = pygame.time.Clock()
-        self.bgmusic = lib.music.bgmusic.backgroundMusicMixer(dir)
+        self.bgmusic = bgmusic.backgroundMusicMixer(dir)
         self.running = True
 
     def update(self):

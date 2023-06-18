@@ -1,8 +1,8 @@
 import sys
 
-import lib.control
+from lib import control
 
-control = lib.control.control(sys.path[0])
+control = control.control(sys.path[0])
 
 while control.running:
     control.update()
